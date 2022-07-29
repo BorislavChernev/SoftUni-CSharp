@@ -15,7 +15,7 @@ namespace Box
 
         public override string ToString()
         {
-            return $"{typeof(T)}: {Element}";
+            return $"{typeof(T)}: {Element}"; //it is good to always use StringBuilder
         }
     }
 }
