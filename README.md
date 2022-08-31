@@ -39,7 +39,7 @@ Here you can find problem solutions from the following lectures:
 8. [**Exams**](https://github.com/BorislavChernev/SoftUni-CSharp/tree/main/CSharp-Advanced/OOP/Exams)
 ***
 
-Here you can find exam problems I used for practice:
+**Here you can find exam problems I used for practice:**
 1. [**Fundamentals**](https://judge.softuni.org/Contests/#!/List/ByCategory/153/Fundamentals-Exams) 
 2. [**Advanced**](https://judge.softuni.org/Contests/#!/List/ByCategory/183/CSharp-Advanced-Exams)
 3. [**OOP**](https://judge.softuni.org/Contests/#!/List/ByCategory/185/CSharp-OOP-Exams)
