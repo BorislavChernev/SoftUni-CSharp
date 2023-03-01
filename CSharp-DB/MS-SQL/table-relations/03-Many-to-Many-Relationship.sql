@@ -1,0 +1,20 @@
+--03. Many-To-Many Relationship
+CREATE TABLE Students (
+	StudentID INT PRIMARY KEY NOT NULL,
+	Name NVARCHAR(20) NOT NULL,
+)
+
+CREATE TABLE Exams (
+	ExamID INT PRIMARY KEY NOT NULL,
+	Name NVARCHAR(20) NOT NULL
+)
+
+CREATE TABLE StudentsExams (
+	StudentID INT,
+	ExamID INT,
+	PRIMARY KEY(StudentID, ExamID),
+	FOREIGN KEY (StudentID)
+	REFERENCES Students(StudentID),
+	FOREIGN KEY (ExamID)
+	REFERENCES Exams(ExamID),
+)
