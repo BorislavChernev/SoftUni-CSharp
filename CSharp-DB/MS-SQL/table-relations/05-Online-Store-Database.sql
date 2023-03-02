@@ -1,0 +1,43 @@
+--05. Online Store Database
+CREATE TABLE Cities (
+	CityID INT PRIMARY KEY,
+	NAME NVARCHAR(20)
+)
+
+CREATE TABLE Customers (
+	CustomerID INT PRIMARY KEY,
+	NAME NVARCHAR(20),
+	Birthday NVARCHAR(20),
+	CityID INT,
+	FOREIGN KEY (CityID)
+	REFERENCES Cities(CityID)
+)
+
+CREATE TABLE Orders (
+	OrderID INT PRIMARY KEY,
+	CustomerID INT,
+	FOREIGN KEY (CustomerID)
+	REFERENCES Customers(CustomerID)
+)
+
+CREATE TABLE ItemTypes (
+	ItemTypeID INT PRIMARY KEY,
+	Name NVARCHAR(20)
+)
+
+CREATE TABLE Items (
+	ItemID INT PRIMARY KEY,
+	NAME NVARCHAR(20),
+	ItemTypeID INT,
+	FOREIGN KEY (ItemTypeID)
+	REFERENCES ItemTypes(ItemTypeID)
+)
+
+CREATE TABLE OrderItems (
+	OrderID INT,
+	ItemID INT,
+	FOREIGN KEY (OrderID)
+	REFERENCES Orders(OrderID),
+	FOREIGN KEY (ItemID)
+	REFERENCES Items(ItemID)
+)
